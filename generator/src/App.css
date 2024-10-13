@@ -1,0 +1,42 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+ 
+.hover\:animate-rotate:hover {
+  animation: rotate 2s linear; /* Adjust the duration as needed */
+}
+.animate-rotate {
+  animation: rotate 5s linear;
+  transform: rotate(0); /* Ensure transform is reset */
+}
+@keyframes moveBubble {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(200px, -100px); }
+  50% { transform: translate(400px, 100px); }
+  75% { transform: translate(200px, 200px); }
+  100% { transform: translate(0, 0); }
+}
+ 
+.animate-bubble {
+  animation: moveBubble 5s infinite ease-in-out;
+}
+/* Dark theme (default, no class needed on body) */
+body {
+  background-color: black;
+  color: white;
+}
+
+.light-theme {
+  background-color: rgb(94, 45, 117);
+  color: black;
+}
+
+/* You can also define specific classes for dark-theme if needed */
+.dark-theme {
+  background-color: black;
+}
